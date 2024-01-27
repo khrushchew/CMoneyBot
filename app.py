@@ -1,7 +1,7 @@
 import telebot
 
 from Properties import TOKEN, currency
-from BotClasses import ConvertionException, CryptoConverter
+from BotClasses import APIException, CryptoConverter
 
 from Messages import list_of_start_messages
 from random import choice
@@ -39,12 +39,12 @@ def convert(message: telebot.types.Message):
         input_price_string = [i.lower() for i in message.text.split()]
 
         if len(input_price_string) != 3:
-            raise ConvertionException("Слишком много параметров!")
+            raise APIException("Слишком много параметров!")
 
         price_from, price_to, quantity = input_price_string
 
         total = CryptoConverter.convert(price_from, price_to, quantity)
-    except ConvertionException as e:
+    except APIException as e:
         bot.reply_to(message, f"Ошибка пользователя\n{e}")
     except Exception as e:
         bot.reply_to(message, f"Не удалось обработать команду\n{e}")
