@@ -15,9 +15,9 @@ Welcome to CMoneyBot! This bot is designed for convenient currency conversion. P
 
 ## Currency Conversion
 
-To convert currencies, send a message to the bot in the format "<from currency> <to currency> <amount>".
-Example input: Dollar Ruble 1
-Example output: 1 Dollar to Ruble - 100
+To convert currencies, send a message to the bot in the format "<from currency> <to currency> <amount>".<br>
+Example input: Dollar Ruble 1<br>
+Example output: 1 Dollar to Ruble - 100<br>
 
 ## Additional Information
 
